@@ -1,4 +1,6 @@
-package com.github.dwivedyaakash.taskly
+package com.github.dwivedyaakash.taskly.data
+
+import com.github.dwivedyaakash.taskly.data.model.Todo
 
 object TodoManager {
     private val todoList = mutableListOf<Todo>()
@@ -8,7 +10,7 @@ object TodoManager {
     }
 
     fun addTodo(title: String) {
-        todoList.add(Todo(System.currentTimeMillis().toInt(), title))
+        todoList.add(Todo(System.currentTimeMillis().toInt(), title, isChecked = false))
     }
 
     fun deleteTodo(id: Int) {
